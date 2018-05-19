@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{wasysym}
+\usepackage[misc,alpine]{ifsym}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+
+\pagenumbering{gobble}
+
+% BEGIN FORMAT DEFINITIONS
+
+% header formatting
+\newcommand{\header}[1]
+{
+	{\hspace*{-4pt} \textbf{\uppercase{#1}}}
+}
+
+\newcommand{\orgheader}[2]
+{
+	\textbf{#1} \hfill \textbf{#2}
+}
+
+\newcommand{\orgdetails}[2]
+{
+	\textit{#1}
+	
+	#2
+}
+
+\newcommand{\bpoint}[1]
+{
+	\raggedright
+	\hangindent=24pt
+	\hspace*{0pt}
+	{\raisebox{2pt}{\tiny$\bullet$}}
+	\hspace{-2pt} #1
+	
+}
+
+\newcommand{\categorylist}[2]
+{
+	\hangindent=24pt
+	\textit{#1}\\
+	#2
+}
+
+\newcommand{\award}[3]
+{
+	\hangindent=24pt
+	\textbf{#1 (#2)}\\
+	#3
+	
+}
+
+\newcommand{\reference}[3]
+{
+	Reference: #1 \ #2 \ \raisebox{2pt}{\tiny{$\bullet$}} \ #3
+}
+
+\newcommand{\publication}[4]
+{
+	{#1}, with {#2}. {#3}. {#4}.
+}
+
+% END FORMAT DIFINITIONS
+
+\begin{document}
+	% top margin of 1 inch
+	% \vspace*{12pt}
+
+	\input{Header}
+	
+	\input{Education}
+	
+	\input{Professional}
+	
+	\input{Publications}
+	
+	\pagebreak
+	% top margin of 1 inch
+	% \vspace*{16pt}
+	\input{Skills}
+	
+	\input{Awards}
+	
+	\input{Volunteer}
+		
+\end{document}

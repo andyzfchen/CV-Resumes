@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{hyperref}
+
+% BEGIN FORMAT DEFINITIONS
+
+% header formatting
+\newcommand{\header}[1]
+{
+	\vspace*{7pt}
+	{\hspace*{-16pt}
+		\vspace*{0pt} \textbf{\uppercase{#1}}}
+	\vspace*{-10pt} \\ 
+	\hspace*{-4pt} \hrulefill \\
+	\vspace{-14pt}
+}
+
+\newcommand{\categorylist}[2]
+{
+	%	\hangindent=108pt
+	%	\textit{#1}:
+	%	\tabto{108pt} #2
+	\hangindent=36pt
+	\textit{#1}\\
+	#2
+}
+
+\newcommand{\bodyextended}[3]
+{
+	\textbf{#1}
+	\hfill
+	#2
+	
+	\textit{#3}
+}
+
+\newcommand{\bpoint}[1]
+{
+	\hangindent=36pt
+	\hspace*{6pt}
+	{$\bullet$}
+	\hspace{-2pt} #1
+	
+}
+
+\newcommand{\bodybrief}[3]
+{
+	\hangindent=36pt
+	\textbf{#1 (#2)}
+	$-$ #3
+	
+}
+
+% END FORMAT DIFINITIONS
+
+\begin{document}
+	
+	\begin{minipage}[t]{0.45\textwidth}
+		\hspace{-16pt}
+		\huge{\textbf{Andy Chen}}
+		
+		\vspace{4pt}
+		\large{Percussionist, Pianist}
+	\end{minipage}
+	\begin{minipage}[t]{0.51\textwidth}
+		\vspace{-8pt}
+		330426 Georgia Tech Station, Atlanta, GA 30332\\
+		(480) 278-5596\\
+		\href{mailto:achen87@gatech.edu}{achen87@gatech.edu}
+	\end{minipage}
+	
+	\input{Education}
+	
+	\input{Performance}
+	
+	\input{Leadership}
+	
+	\input{Mentors}
+	
+	\input{Honors}
+	
+\end{document}

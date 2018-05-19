@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{hologo}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{hyperref}
+\usepackage{wasysym}
+\usepackage[misc,alpine]{ifsym}
+
+\pagenumbering{gobble}
+
+% BEGIN FORMAT DEFINITIONS
+
+% header formatting
+\newcommand{\header}[1]
+{
+%	\vspace{7pt}
+	{\hspace{-16pt}
+		\vspace{0pt} \textbf{\uppercase{#1}}}
+	\vspace{-10pt} \\ 
+	\hspace*{-4pt} \hrulefill \\
+	\vspace{-14pt}
+}
+
+\newcommand{\categorylist}[2]
+{
+	\hangindent=36pt
+	\textit{#1}\\
+	#2
+}
+
+\newcommand{\bodyextended}[3]
+{
+	\textbf{#1}
+	\hfill
+	#2
+	
+	\textit{#3}
+}
+
+\newcommand{\multibodyheader}[1]
+{
+	\textbf{#1}
+}
+	
+\newcommand{\multibodypos}[2]
+{
+	\textit{#1}
+	\hfill
+	#2
+}
+
+\newcommand{\bpoint}[1]
+{
+	\hangindent=36pt
+	\hspace*{6pt}
+	{\raisebox{2pt}{\tiny$\bullet$}}
+	\hspace{-2pt} #1
+	
+}
+
+\newcommand{\bodybrief}[3]
+{
+	\hangindent=36pt
+	\textbf{#1 (#2)}\\
+	#3
+	
+}
+
+% END FORMAT DIFINITIONS
+
+\begin{document}
+	\input{Header}
+	
+	\input{Education}
+	
+	\input{Professional}
+	
+	\input{Volunteer}
+	
+	\input{Skills}
+	
+	\input{Honors}
+	
+\end{document}
