@@ -7,65 +7,69 @@
 \usepackage{hyperref}
 \usepackage{wasysym}
 \usepackage[misc,alpine]{ifsym}
+\usepackage{graphicx}
 
 \pagenumbering{gobble}
+\setlength{\parindent}{0pt}
 
 % BEGIN FORMAT DEFINITIONS
 
 % header formatting
 \newcommand{\header}[1]
 {
-%	\vspace{7pt}
-	{\hspace{-16pt}
-		\vspace{0pt} \textbf{\uppercase{#1}}}
+	\textbf{\uppercase{#1}}
 	\vspace{-10pt} \\ 
-	\hspace*{-4pt} \hrulefill \\
-	\vspace{-14pt}
+	\hspace*{-4pt} \hrulefill
+	\vspace*{-4pt}
+
 }
 
-\newcommand{\categorylist}[2]
+\newcommand{\degree}[3]
 {
-	\hangindent=36pt
-	\textit{#1}\\
-	#2
+	#1 \textit{#2} \hfill #3
+
 }
 
-\newcommand{\bodyextended}[3]
+\newcommand{\orgheader}[2]
 {
-	\textbf{#1}
-	\hfill
-	#2
-	
-	\textit{#3}
+	\textbf{#1} \hfill \textbf{#2}
+
 }
 
-\newcommand{\multibodyheader}[1]
+\newcommand{\orgdetails}[2]
 {
-	\textbf{#1}
-}
-	
-\newcommand{\multibodypos}[2]
-{
-	\textit{#1}
-	\hfill
-	#2
+	\textit{#1} \hfill #2
+
 }
 
 \newcommand{\bpoint}[1]
 {
-	\hangindent=36pt
-	\hspace*{6pt}
+	\raggedright
+	\hangindent=24pt
+	\hspace*{0pt}
 	{\raisebox{2pt}{\tiny$\bullet$}}
 	\hspace{-2pt} #1
+
+}
+
+\newcommand{\categorylist}[2]
+{
+	\hangindent=24pt
+	\textit{#1}\\
+	#2
+}
+
+\newcommand{\award}[3]
+{
+	\textbf{#1 (#2)}\\
+	% \hangindent=22pt
+	% \qquad #3
 	
 }
 
-\newcommand{\bodybrief}[3]
+\newcommand{\reference}[3]
 {
-	\hangindent=36pt
-	\textbf{#1 (#2)}\\
-	#3
-	
+	Reference: #1 \ #2 \ \raisebox{2pt}{\tiny{$\bullet$}} \ #3
 }
 
 % END FORMAT DIFINITIONS
@@ -77,10 +81,10 @@
 	
 	\input{Professional}
 	
-	\input{Volunteer}
-	
 	\input{Skills}
-	
-	\input{Honors}
+
+	\input{Volunteer}
+
+	\input{Awards}
 	
 \end{document}
