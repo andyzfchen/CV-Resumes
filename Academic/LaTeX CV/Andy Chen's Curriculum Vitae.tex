@@ -7,7 +7,11 @@
 \usepackage[misc,alpine]{ifsym}
 \usepackage{graphicx}
 \usepackage{etoolbox}
+% \usepackage{bibentry}
+% \usepackage{natbib}
 
+\setlength{\parindent}{0pt}
+% \setlength{\bibhang}{100pt}
 \pagenumbering{gobble}
 
 % BEGIN FORMAT DEFINITIONS
@@ -15,7 +19,22 @@
 % header formatting
 \newcommand{\header}[1]
 {
-	{\hspace*{-4pt} \textbf{\uppercase{#1}}}
+	{\textbf{\uppercase{#1}}}
+}
+
+\newcommand{\education}[3]
+{
+	\hangindent=24pt
+	\textbf{#1} \hfill \textbf{#2}\\
+	#3
+	
+}
+
+\newcommand{\organization}[4]
+{
+	\textbf{#1} \hfill \textbf{#2}\\
+	\hspace*{20pt} \textit{#3}\\
+	\hspace*{20pt} #4
 }
 
 \newcommand{\orgheader}[2]
@@ -25,34 +44,32 @@
 
 \newcommand{\orgdetails}[2]
 {
-	\textit{#1}
-	
-	#2
+	\hspace*{20pt} \textit{#1}\\
+	\hspace*{20pt} #2
 }
 
 \newcommand{\bpoint}[1]
 {
+	% \hangindent=24pt
 	\raggedright
-	\hangindent=24pt
-	\hspace*{0pt}
+	\hspace*{24pt}
 	{\raisebox{2pt}{\tiny$\bullet$}}
 	\hspace{-2pt} #1
-	
+
 }
 
 \newcommand{\categorylist}[2]
 {
-	\hangindent=24pt
+	% \hangindent=24pt
 	\textit{#1}\\
-	#2
+	\hspace*{20pt} #2
 }
 
 \newcommand{\award}[3]
 {
 	\hangindent=24pt
 	\textbf{#1 (#2)}\\
-	#3
-	
+	#3	
 }
 
 \newcommand{\reference}[3]
