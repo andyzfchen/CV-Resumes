@@ -24,17 +24,31 @@
 
 \newcommand{\education}[3]
 {
-	\hangindent=24pt
+  \raggedright
 	\textbf{#1} \hfill \textbf{#2}\\
+  {
+  \setlength\parindent{14pt}
 	#3
-	
+  }
 }
 
-\newcommand{\organization}[4]
+\newcommand{\organization}[5]
 {
+  \raggedright
 	\textbf{#1} \hfill \textbf{#2}\\
-	\hspace*{20pt} \textit{#3}\\
-	\hspace*{20pt} #4
+	{
+  \setlength\parindent{14pt}
+  \textit{#3 $\vert$ #4}\\
+	#5
+  }
+}
+
+\newcommand{\reference}[2]
+{
+  {
+  \setlength\parindent{14pt}
+	Reference: #1 $\vert$ #2
+  }
 }
 
 \newcommand{\orgheader}[2]
@@ -50,12 +64,10 @@
 
 \newcommand{\bpoint}[1]
 {
-	% \hangindent=24pt
-	\raggedright
-	\hspace*{24pt}
+  \raggedright
+	\hspace*{20pt}
 	{\raisebox{2pt}{\tiny$\bullet$}}
-	\hspace{-2pt} #1
-
+	\hspace*{-2pt} #1\\
 }
 
 \newcommand{\categorylist}[2]
@@ -70,11 +82,6 @@
 	\hangindent=24pt
 	\textbf{#1 (#2)}\\
 	#3	
-}
-
-\newcommand{\reference}[3]
-{
-	Reference: #1 \ #2 \ \raisebox{2pt}{\tiny{$\bullet$}} \ #3
 }
 
 \newcommand{\publication}[4]
@@ -94,7 +101,6 @@
 	
 	\input{Publications}
 	
-	\pagebreak
 	\input{Skills}
 	
 	\input{Awards}
