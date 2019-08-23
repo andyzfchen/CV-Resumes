@@ -2,28 +2,28 @@
 
 \makeatletter
 \renewcommand\@biblabel[1]{}
-\makeatother
+%\makeatother
 
-% \patchcmd{\thebibliography}
-%   {\settowidth}
-%   {\setlength{\parsep}{-20pt}\setlength{\itemsep}{-20pt plus -20.1pt}\settowidth}
-%   {}{}
-
+\patchcmd{\thebibliography}
+  {\settowidth}
+  {\setlength{\parsep}{0pt}\settowidth}
+  {}{}
 
 \begin{minipage}[t]{0.2\textwidth}
 	\flushleft
 	\header{Publications}
 \end{minipage}
+\hspace*{-10pt}
 \begin{minipage}[t]{0.8\textwidth}
 	\vspace{-24pt}
+  \setlength{\parindent}{-10pt}
 	\renewcommand\refname{}
 	\bibliographystyle{abbrv}
 	\bibliography{papers}
-	% \hangindent=24pt
 
 	\nocite{chen2017}
 	\nocite{xu2017}
 	\nocite{chen2013}
 \end{minipage}
 
-\vspace{8pt}
+\vspace*{8pt}

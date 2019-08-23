@@ -11,12 +11,10 @@
 % \usepackage{natbib}
 
 \setlength{\parindent}{0pt}
-% \setlength{\bibhang}{100pt}
 \pagenumbering{gobble}
 
 % BEGIN FORMAT DEFINITIONS
 
-% header formatting
 \newcommand{\header}[1]
 {
 	{\textbf{\uppercase{#1}}}
@@ -58,8 +56,12 @@
 
 \newcommand{\orgdetails}[2]
 {
-	\hspace*{20pt} \textit{#1}\\
-	\hspace*{20pt} #2
+  \raggedright
+  {
+  \setlength\parindent{14pt}
+	\textit{#1}\\
+	#2
+  }
 }
 
 \newcommand{\bpoint}[1]
@@ -72,16 +74,19 @@
 
 \newcommand{\categorylist}[2]
 {
-	% \hangindent=24pt
-	\textit{#1}\\
-	\hspace*{20pt} #2
+  \raggedright
+	\textbf{#1}\\
+  {
+  \setlength\parindent{14pt}
+	#2
+  }
 }
 
 \newcommand{\award}[3]
 {
-	\hangindent=24pt
-	\textbf{#1 (#2)}\\
-	#3	
+  \hangindent=14pt
+  \textbf{#1 (#2)}\\
+  #3	
 }
 
 \newcommand{\publication}[4]
@@ -97,14 +102,20 @@
 	
 	\input{Education}
 	
-	\input{Professional}
+	\input{Research}
+
+  \newpage
 	
 	\input{Publications}
 	
 	\input{Skills}
-	
+
 	\input{Awards}
 	
-	\input{Volunteer}
+  \newpage
+	
+	\input{Work}
+	
+	\input{Leadership}
 		
 \end{document}
